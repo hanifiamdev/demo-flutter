@@ -9,15 +9,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<Widget> widgets = [];
-
-  _MyAppState() {
-    for (int i = 0; i < 15; i++) {
-      widgets.add(Text(
-        "Data ke-" + i.toString(),
-        style: TextStyle(fontSize: 70),
-      ));
-    }
-  }
+  int counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +19,37 @@ class _MyAppState extends State<MyApp> {
         title: Text("Latihan ListView"),
       ),
       body: ListView(
-        children: widgets,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment:
+                MainAxisAlignment.spaceAround, // sisa space akan dibagi rata
+            children: <Widget>[
+              RaisedButton(
+                  child: Text("Tambah Data"),
+                  onPressed: () {
+                    setState(() {
+                      widgets.add(Text(
+                        "Data ke-" + counter.toString(),
+                        style: TextStyle(fontSize: 35),
+                      ));
+                      counter++;
+                    });
+                  }),
+              RaisedButton(
+                  child: Text("Hapus Data"),
+                  onPressed: () {
+                    setState(() {
+                      widgets.removeLast();
+                      counter--;
+                    });
+                  })
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: widgets,
+          )
+        ],
       ),
     ));
   }
