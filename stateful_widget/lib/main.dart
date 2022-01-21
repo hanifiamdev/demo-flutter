@@ -32,6 +32,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   void tekanTombol() {
-    number++;
+    // Dengan setState tampilan baru dapat berubah
+    // kareana method ini akan merubah tampilan sesuai state saat ini
+    setState(() {
+      number++;
+    });
   }
 }
