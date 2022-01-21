@@ -21,7 +21,10 @@ class _MyAppState extends State<MyApp> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(number.toString()),
+            Text(
+              number.toString(),
+              style: TextStyle(fontSize: 10 + number.toDouble()),
+            ),
             RaisedButton(
                 child: Text("Tambah Bilangan"),
                 onPressed: tekanTombol) // tombol button
