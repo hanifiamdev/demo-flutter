@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.red,
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.fromLTRB(10, 15, 20, 25),
+          padding: EdgeInsets.only(bottom: 20, top: 20),
           child: Container(
             color: Colors.blue,
+            margin: EdgeInsets.all(10),
           ),
         ),
       ),
