@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: Text("Latihan ListView"),
       ),
-      body: Column(
+      body: ListView(
         children: widgets,
       ),
     ));
