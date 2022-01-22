@@ -23,6 +23,25 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               TextField(
+                decoration: InputDecoration(
+                    fillColor: Colors.lightBlue[50],
+                    filled: true,
+                    icon: Icon(Icons.adb),
+                    suffix: Container(
+                      width: 5,
+                      height: 5,
+                      color: Colors.red,
+                    ),
+                    prefixIcon: Icon(Icons.person), //include Icon in fieldText
+                    prefixText: "Name: ",
+                    hintText: "Nama lengkapnya lho..",
+                    prefixStyle: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.w600),
+                    labelText: "Nama Lengkap",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                            10)) // InputBorder.none = hilang garisnya
+                    ),
                 //obscureText: true, // mengganti dewngan text yang diketik ....
                 maxLength: 5, // maksimal text
                 onChanged: (value) {
@@ -31,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                 },
                 controller: controller,
               ),
-              Text(controller.text)
+              Text(controller.text) // membaca inputan text
             ],
           ),
         ),
