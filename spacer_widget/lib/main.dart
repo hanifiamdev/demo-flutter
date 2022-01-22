@@ -14,18 +14,21 @@ class MyApp extends StatelessWidget {
               spaceEvenly : space kosong dibagi secara merata
               spaeBetween : space kosong dibagi secara meratea di antara Container lainnya
             */
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              Spacer(flex: 1),
               Container(
                 width: 80,
                 height: 80,
                 color: Colors.red,
               ),
+              Spacer(flex: 2),
               Container(
                 width: 80,
                 height: 80,
                 color: Colors.green,
               ),
+              Spacer(flex: 3),
               Container(
                 width: 80,
                 height: 80,
