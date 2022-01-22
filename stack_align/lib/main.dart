@@ -106,7 +106,8 @@ class MyApp extends StatelessWidget {
           ),
           // button di tengah bawah
           Align(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment(0.9,
+                0.6), // x : kiri(-1) sampai kanan(1) , y :  atas(-1) sampai bawah(1)
             child: RaisedButton(
               child: Text("My Button"),
               onPressed: () {},
