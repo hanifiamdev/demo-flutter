@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: GestureDetector(
-            onTap: () {
+            onTap: () { // Jika ada tap maka aka mentrigger
               setState(() {});
             },
             child: AnimatedContainer(
